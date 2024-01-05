@@ -1,11 +1,11 @@
 {
-	"name": "svelte-kit-connect-redis",
-	"version": "0.0.3",
-	"description": "svelte-kit-connect-redis provides Redis session storage for svelte-kit-sessions.",
+	"name": "svelte-kit-connect-upstash-redis",
+	"version": "0.0.1",
+	"description": "svelte-kit-connect-upstash-redis provides Upstash Redis session storage for svelte-kit-sessions.",
 	"author": "yutak23 <yuta.katayama.23+github@gmail.com> (https://github.com/yutak23)",
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com:yutak23/svelte-kit-connect-redis.git"
+		"url": "git+ssh://git@github.com:yutak23/svelte-kit-connect-upstash-redis.git"
 	},
 	"license": "MIT",
 	"type": "module",
@@ -29,8 +29,7 @@
 		"ncu": "ncu"
 	},
 	"dependencies": {
-		"ioredis": "^5.3.2",
-		"redis": "^4.6.12",
+		"@upstash/redis": "^1.27.1",
 		"svelte-kit-sessions": "^0.0.6"
 	},
 	"devDependencies": {
@@ -58,6 +57,9 @@
 		"sveltekit",
 		"svelte-kit",
 		"redis",
+		"upstash",
+		"upstash/redis",
+		"@upstash/redis",
 		"session",
 		"connect-redis",
 		"connect",

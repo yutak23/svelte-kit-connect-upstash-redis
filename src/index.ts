@@ -1,6 +1,7 @@
 import type { SessionStoreData, Store } from 'svelte-kit-sessions';
-import * as ioredis from 'ioredis';
-import * as redis from 'redis';
+import * as upstashRedis from '@upstash/redis';
+import * as upstashRedisCloudflare from '@upstash/redis/cloudflare';
+import * as upstashRedisFastly from '@upstash/redis/fastly';
 
 interface Serializer {
 	parse(s: string): SessionStoreData | Promise<SessionStoreData>;
@@ -9,9 +10,9 @@ interface Serializer {
 
 interface RedisStoreOptions {
 	/**
-	 * An instance of [`redis`](https://www.npmjs.com/package/redis) or [`ioredis`](https://www.npmjs.com/package/ioredis).
+	 * An instance of [`@upstash/redis`](https://www.npmjs.com/package/@upstash/redis).
 	 */
-	client: ioredis.Redis | redis.RedisClientType;
+	client: upstashRedis.Redis | upstashRedisCloudflare.Redis | upstashRedisFastly.Redis;
 	/**
 	 * The prefix of the key in redis.
 	 * @default 'sess:'
@@ -41,9 +42,9 @@ export default class RedisStore implements Store {
 	}
 
 	/**
-	 * An instance of [`redis`](https://www.npmjs.com/package/redis) or [`ioredis`](https://www.npmjs.com/package/ioredis).
+	 * An instance of [`@upstash/redis`](https://www.npmjs.com/package/@upstash/redis).
 	 */
-	client: ioredis.Redis | redis.RedisClientType;
+	client: upstashRedis.Redis | upstashRedisCloudflare.Redis | upstashRedisFastly.Redis;
 
 	/**
 	 * The prefix of the key in redis.
@@ -65,8 +66,8 @@ export default class RedisStore implements Store {
 
 	async get(id: string): Promise<SessionStoreData | null> {
 		const key = this.prefix + id;
-		const storeData = (await this.client.get(key)) as string;
-		return storeData ? this.serializer.parse(storeData) : null;
+		const storeData = await this.client.get<SessionStoreData | undefined>(key);
+		return storeData || null;
 	}
 
 	async set(id: string, storeData: SessionStoreData, ttl: number): Promise<void> {
@@ -75,19 +76,10 @@ export default class RedisStore implements Store {
 
 		// Infinite time does not support, so it is implemented separately.
 		if (ttl !== Infinity) {
-			if (this.client instanceof ioredis.Redis) {
-				await this.client.set(key, serialized, 'PX', ttl);
-				return;
-			}
-			await this.client.set(key, serialized, { PX: ttl });
+			await this.client.set(key, serialized, { px: ttl });
 			return;
 		}
-
-		if (this.client instanceof ioredis.Redis) {
-			await this.client.set(key, serialized, 'PX', this.ttl);
-			return;
-		}
-		await this.client.set(key, serialized, { PX: this.ttl });
+		await this.client.set(key, serialized, { px: this.ttl });
 	}
 
 	async destroy(id: string): Promise<void> {

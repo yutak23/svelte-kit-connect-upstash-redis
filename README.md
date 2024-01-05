@@ -1,76 +1,39 @@
-# svelte-kit-connect-redis
+# svelte-kit-connect-upstash-redis
 
-[![npm](https://img.shields.io/npm/v/svelte-kit-connect-redis.svg)](https://www.npmjs.com/package/svelte-kit-connect-redis)
-[![test](https://github.com/yutak23/svelte-kit-connect-redis/actions/workflows/test.yaml/badge.svg)](https://github.com/yutak23/svelte-kit-connect-redis/actions/workflows/test.yaml)
+[![npm](https://img.shields.io/npm/v/svelte-kit-connect-upstash-redis.svg)](https://www.npmjs.com/package/svelte-kit-connect-upstash-redis)
+[![test](https://github.com/yutak23/svelte-kit-connect-upstash-redis/actions/workflows/test.yaml/badge.svg)](https://github.com/yutak23/svelte-kit-connect-upstash-redis/actions/workflows/test.yaml)
 ![style](https://img.shields.io/badge/code%20style-airbnb-ff5a5f.svg)
 
-**svelte-kit-connect-redis** provides Redis session storage for [svelte-kit-sessions](https://www.npmjs.com/package/svelte-kit-sessions).
+**svelte-kit-connect-upstash-redis** provides [Upstash Redis](https://upstash.com/docs/redis/overall/getstarted) session storage for [svelte-kit-sessions](https://www.npmjs.com/package/svelte-kit-sessions).
 
 ## Installation
 
-**svelte-kit-connect-redis** requires [`svelte-kit-sessions`](https://www.npmjs.com/package/svelte-kit-sessions) to installed and one of the following compatible Redis clients:
-
-- [`redis`](https://www.npmjs.com/package/redis)
-- [`ioredis`](https://www.npmjs.com/package/ioredis)
-
-Install with `redis`:
+**svelte-kit-connect-upstash-redis** requires [`svelte-kit-sessions`](https://www.npmjs.com/package/svelte-kit-sessions) to installed.
 
 ```console
-$ npm install redis svelte-kit-connect-redis svelte-kit-sessions
+$ npm install redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 
-$ yarn add redis svelte-kit-connect-redis svelte-kit-sessions
+$ yarn add redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 
-$ pnpm add redis svelte-kit-connect-redis svelte-kit-sessions
-```
-
-Install with `ioredis`:
-
-```console
-$ npm install ioredis svelte-kit-connect-redis svelte-kit-sessions
-
-$ yarn add ioredis svelte-kit-connect-redis svelte-kit-sessions
-
-$ pnpm add ioredis svelte-kit-connect-redis svelte-kit-sessions
+$ pnpm add redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 ```
 
 ## Usage
 
-`svelte-kit-connect-redis` can be used as a custom store for `svelte-kit-sessions` as follows.
+`svelte-kit-connect-upstash-redis` can be used as a custom store for `svelte-kit-sessions` as follows.
 
 **Note** For more information about `svelte-kit-sessions`, see https://www.npmjs.com/package/svelte-kit-sessions.
 
-### redis
-
 ```ts
 // src/hooks.server.ts
 import type { Handle } from '@sveltejs/kit';
 import { sveltekitSessionHandle } from 'svelte-kit-sessions';
-import RedisStore from 'svelte-kit-connect-redis';
-import { createClient } from 'redis';
-
-const client = redis.createClient({
-	url: 'redis://{your redis endpoint}'
-});
-const clientConnection = await client.connect();
-
-export const handle: Handle = sveltekitSessionHandle({
-	secret: 'secret',
-	store: new RedisStore({ client: clientConnection })
-});
-```
-
-### ioredis
-
-```ts
-// src/hooks.server.ts
-import type { Handle } from '@sveltejs/kit';
-import { sveltekitSessionHandle } from 'svelte-kit-sessions';
-import RedisStore from 'svelte-kit-connect-redis';
+import RedisStore from 'svelte-kit-connect-upstash-redis';
 import { Redis } from 'ioredis';
 
 const client = new Redis({
-	host: '{your redis host}',
-	port: 6379
+	url: '{your upstash redis rest url}',
+	token: '{your upstash redis rest token}'
 });
 
 export const handle: Handle = sveltekitSessionHandle({
@@ -82,7 +45,7 @@ export const handle: Handle = sveltekitSessionHandle({
 ## API
 
 ```ts
-import RedisStore from 'svelte-kit-connect-redis';
+import RedisStore from 'svelte-kit-connect-upstash-redis';
 
 new RedisStore(options);
 ```
@@ -95,16 +58,16 @@ Create a Redis store for `svelte-kit-sessions`.
 
 A summary of the `options` is as follows.
 
-| Name       | Type                                   | required/optional | Description                                                                                                                               |
-| ---------- | -------------------------------------- | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| client     | redis.RedisClientType \| ioredis.Redis | _required_        | An instance of [`redis`](https://www.npmjs.com/package/redis) or [`ioredis`](https://www.npmjs.com/package/ioredis)                       |
-| prefix     | string                                 | _optional_        | Key prefix in Redis (default: `sess:`).                                                                                                   |
-| serializer | Serializer                             | _optional_        | Provide a custom encoder/decoder to use when storing and retrieving session data from Redis (default: `JSON.parse` and `JSON.stringify`). |
-| ttl        | number                                 | _optional_        | ttl to be used if ttl is _Infinity_ when used from `svelte-kit-sessions`                                                                  |
+| Name       | Type                                                                           | required/optional | Description                                                                                                                               |
+| ---------- | ------------------------------------------------------------------------------ | ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| client     | upstashRedis.Redis \| upstashRedisCloudflare.Redis \| upstashRedisFastly.Redis | _required_        | An instance of [`@upstash/redis`](https://www.npmjs.com/package/@upstash/redis)                                                           |
+| prefix     | string                                                                         | _optional_        | Key prefix in Redis (default: `sess:`).                                                                                                   |
+| serializer | Serializer                                                                     | _optional_        | Provide a custom encoder/decoder to use when storing and retrieving session data from Redis (default: `JSON.parse` and `JSON.stringify`). |
+| ttl        | number                                                                         | _optional_        | ttl to be used if ttl is _Infinity_ when used from `svelte-kit-sessions`                                                                  |
 
 #### client
 
-An instance of [`redis`](https://www.npmjs.com/package/redis) or [`ioredis`](https://www.npmjs.com/package/ioredis).
+An instance of [`@upstash/redis`](https://www.npmjs.com/package/@upstash/redis). You can use to all of @upstash/redis (node, cloudflare, fastly).
 
 #### prefix
 
@@ -130,7 +93,7 @@ When `svelte-kit-sessions` calls a method of the store (the `set` function), ttl
 If the ttl passed is _Infinity_, the ttl to be set can be set with this option. The unit is milliseconds.
 
 ```ts
-// `svelte-kit-connect-redis` implementation excerpts
+// `svelte-kit-connect-upstash-redis` implementation excerpts
 const ONE_DAY_IN_SECONDS = 86400;
 export default class RedisStore implements Store {
 	constructor(options: RedisStoreOptions) {
