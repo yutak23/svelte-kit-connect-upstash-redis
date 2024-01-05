@@ -29,7 +29,9 @@ $ pnpm add @upstash/redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 import type { Handle } from '@sveltejs/kit';
 import { sveltekitSessionHandle } from 'svelte-kit-sessions';
 import RedisStore from 'svelte-kit-connect-upstash-redis';
-import { Redis } from '@upstash/redis';
+import { Redis } from '@upstash/redis'; // <- for Node
+// import { Redis } from '@upstash/redis/cloudflare'; // <- for Cloudflare
+// import { Redis } from '@upstash/redis/fastly'; // <- for Fastly
 
 const client = new Redis({
 	url: '{your upstash redis rest url}',
