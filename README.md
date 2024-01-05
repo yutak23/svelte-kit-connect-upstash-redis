@@ -11,11 +11,11 @@
 **svelte-kit-connect-upstash-redis** requires [`svelte-kit-sessions`](https://www.npmjs.com/package/svelte-kit-sessions) to installed.
 
 ```console
-$ npm install redis svelte-kit-connect-upstash-redis svelte-kit-sessions
+$ npm install @upstash/redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 
-$ yarn add redis svelte-kit-connect-upstash-redis svelte-kit-sessions
+$ yarn add @upstash/redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 
-$ pnpm add redis svelte-kit-connect-upstash-redis svelte-kit-sessions
+$ pnpm add @upstash/redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 ```
 
 ## Usage
@@ -29,7 +29,7 @@ $ pnpm add redis svelte-kit-connect-upstash-redis svelte-kit-sessions
 import type { Handle } from '@sveltejs/kit';
 import { sveltekitSessionHandle } from 'svelte-kit-sessions';
 import RedisStore from 'svelte-kit-connect-upstash-redis';
-import { Redis } from 'ioredis';
+import { Redis } from '@upstash/redis';
 
 const client = new Redis({
 	url: '{your upstash redis rest url}',
