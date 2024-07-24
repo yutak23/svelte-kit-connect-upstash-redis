@@ -39,7 +39,7 @@
 		"@types/node": "^18.19.41",
 		"@typescript-eslint/eslint-plugin": "^7.16.1",
 		"@typescript-eslint/parser": "^7.16.1",
-		"@vitest/coverage-v8": "^1.6.0",
+		"@vitest/coverage-v8": "^2.0.4",
 		"eslint": "^8.57.0",
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-config-airbnb-typescript": "^18.0.0",
@@ -48,7 +48,7 @@
 		"npm-check-updates": "^16.14.20",
 		"prettier": "^3.3.3",
 		"typescript": "^5.5.3",
-		"vitest": "^1.6.0"
+		"vitest": "^2.0.4"
 	},
 	"files": [
 		"dist"
