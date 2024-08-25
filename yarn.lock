@@ -432,10 +432,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@^18.19.44":
-  version "18.19.44"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.44.tgz#875a8322d17ff12bf82b3af8c07b9310a00e72f8"
-  integrity sha512-ZsbGerYg72WMXUIE9fYxtvfzLEuq6q8mKERdWFnqTmOvudMxnz+CBNRoOwJ2kNpFOncrKjT1hZwxjlFgQ9qvQA==
+"@types/node@^18.19.45":
+  version "18.19.45"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.45.tgz#a9ebfe4c316a356be7ca11f753ecb2feda6d6bdf"
+  integrity sha512-VZxPKNNhjKmaC1SUYowuXSRSMGyQGmQjvvA1xE4QZ0xce2kLtEhPDS+kqpCPBZYgqblCLQ2DAjSzmgCM5auvhA==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1885,10 +1885,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-npm-check-updates@^17.0.6:
-  version "17.0.6"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-17.0.6.tgz#55f6b89cb5ef03bc42a00e359a90c21c7b057829"
-  integrity sha512-KCiaJH1cfnh/RyzKiDNjNfXgcKFyQs550Uf1OF/Yzb8xO56w+RLpP/OKRUx23/GyP/mLYwEpOO65qjmVdh6j0A==
+npm-check-updates@^17.1.0:
+  version "17.1.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-17.1.0.tgz#67de181a6949301981ab7c8c9d7fa8862a147675"
+  integrity sha512-RcohCA/tdpxyPllBlYDkqGXFJQgTuEt0f2oPSL9s05pZ3hxYdleaUtvEcSxKl0XAg3ncBhVgLAxhXSjoryUU5Q==
 
 npm-run-path@^5.1.0:
   version "5.2.0"
@@ -2372,10 +2372,10 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.yarnpkg.com/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
-svelte-kit-sessions@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/svelte-kit-sessions/-/svelte-kit-sessions-0.3.1.tgz#7cb6ec7705ce923abc2a133ca286e6ce11137468"
-  integrity sha512-aweZgF/0CPmmRAjNb/S21u1Z/ko1NyZ30UvyhDKYkQrNFlPjjIKq3WEEN0AMlwo+M0DBAbLcjuW3RXwqhMCU9Q==
+svelte-kit-sessions@^0.3.2:
+  version "0.3.2"
+  resolved "https://registry.yarnpkg.com/svelte-kit-sessions/-/svelte-kit-sessions-0.3.2.tgz#bbb55e5c0b2427cb35b910c3a8fdf84a80439e08"
+  integrity sha512-UHhnDEvPR+PGkLYjybgwjQ+eTwAX26RuDCXdNJvM5E2HD6hRUpxfFQfOkQc+ZU1ZmQlHMsokt6wHkgTidFLEwg==
   dependencies:
     "@isaacs/ttlcache" "^1.4.1"
 
