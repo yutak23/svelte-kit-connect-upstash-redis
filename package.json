@@ -43,9 +43,9 @@
 		"eslint": "^8.57.1",
 		"eslint-config-airbnb-base": "^15.0.0",
 		"eslint-config-airbnb-typescript": "^18.0.0",
-		"eslint-config-prettier": "^10.1.1",
+		"eslint-config-prettier": "^10.1.2",
 		"eslint-plugin-import": "^2.31.0",
-		"npm-check-updates": "^17.1.16",
+		"npm-check-updates": "^17.1.18",
 		"prettier": "^3.5.3",
 		"typescript": "^5.8.3",
 		"vitest": "^3.1.1"
