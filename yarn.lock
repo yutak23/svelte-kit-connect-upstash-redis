@@ -505,10 +505,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@^18.19.123":
-  version "18.19.123"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.123.tgz#08a3e4f5e0c73b8840c677b7635ce59d5dc1f76d"
-  integrity sha512-K7DIaHnh0mzVxreCR9qwgNxp3MH9dltPNIEddW9MYUlcKAzm+3grKNSTe2vCJHI1FaLpvpL5JGJrz1UZDKYvDg==
+"@types/node@^18.19.124":
+  version "18.19.124"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.124.tgz#6f49e4fab8274910691a900e8a14316cbf3c7a31"
+  integrity sha512-hY4YWZFLs3ku6D2Gqo3RchTd9VRCcrjqp/I0mmohYeUVA5Y8eCXKJEasHxLAJVZRJuQogfd1GiJ9lgogBgKeuQ==
   dependencies:
     undici-types "~5.26.4"
 
@@ -2644,10 +2644,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-npm-check-updates@^18.0.2:
-  version "18.0.2"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-18.0.2.tgz#ff956c9ae0eab87eaf4ae586849203ca91257f02"
-  integrity sha512-9uVFZUCg5oDOcbzdsrJ4BEvq2gikd23tXuF5mqpl4mxVl051lzB00Xmd7ZVjVWY3XNUF3BQKWlN/qmyD8/bwrA==
+npm-check-updates@^18.0.3:
+  version "18.0.3"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-18.0.3.tgz#7485cddebd27adcf4c57acc4c9e653b38c7e67af"
+  integrity sha512-IMZWxgAa5gpDVEle2KOZOMLfCu2/9FV+xsXQjPFt2OV0dyZixn0OJrZ9NxUcWgr/ZTGogmZtE0Cb8x2wlsVULg==
 
 object-inspect@^1.13.1, object-inspect@^1.9.0:
   version "1.13.1"
