@@ -505,10 +505,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@^18.19.125":
-  version "18.19.125"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.125.tgz#179a577373347f29560cc4dfef9ee36229a09647"
-  integrity sha512-4TWNu0IxTQcszliYdW2mxrVvhHeERUeDCUwVuvQFn9JCU02kxrUDs8v52yOazPo7wLHKgqEd2FKxlSN6m8Deqg==
+"@types/node@^18.19.127":
+  version "18.19.127"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.127.tgz#7c2e47fa79ad7486134700514d4a975c4607f09d"
+  integrity sha512-gSjxjrnKXML/yo0BO099uPixMqfpJU0TKYjpfLU7TrtA2WWDki412Np/RSTPRil1saKBhvVVKzVx/p/6p94nVA==
   dependencies:
     undici-types "~5.26.4"
 
@@ -625,10 +625,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@upstash/redis@^1.35.3":
-  version "1.35.3"
-  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.35.3.tgz#7b383b6a8af57e619c054bdccdb7a6159860cdf5"
-  integrity sha512-hSjv66NOuahW3MisRGlSgoszU2uONAY2l5Qo3Sae8OT3/Tng9K+2/cBRuyPBX8egwEGcNNCF9+r0V6grNnhL+w==
+"@upstash/redis@^1.35.4":
+  version "1.35.4"
+  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.35.4.tgz#28a8a5492b32a9a546c709502ffbd57de06c87ef"
+  integrity sha512-WE1ZnhFyBiIjTDW13GbO6JjkiMVVjw5VsvS8ENmvvJsze/caMQ5paxVD44+U68IUVmkXcbsLSoE+VIYsHtbQEw==
   dependencies:
     uncrypto "^0.1.3"
 
@@ -2644,10 +2644,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-npm-check-updates@^18.1.1:
-  version "18.1.1"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-18.1.1.tgz#4b507491db8989a18e3a61c23d5ad42d4f7c93b1"
-  integrity sha512-sr+z5tEZop9n+uxAv/FVbpIdrayfG3Dr/D91igb+GyBl9eiudYUfGUZEBsmHq6kMOGEssSM3YWrP3njQjVU4Gw==
+npm-check-updates@^18.3.0:
+  version "18.3.0"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-18.3.0.tgz#d2094b11e9557755813e35c1f470fe30c0c3a4e3"
+  integrity sha512-Wcm90Af5JuzxwPTtdLl0OH2O1TCeqPTYBch1M3bePmfqylRMiFXXh+uglE4sfMjwdTjw7aIReMwudXeqoYvh2Q==
 
 object-inspect@^1.13.1, object-inspect@^1.9.0:
   version "1.13.1"
