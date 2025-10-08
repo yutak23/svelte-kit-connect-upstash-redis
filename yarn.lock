@@ -505,10 +505,10 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/node@^18.19.127":
-  version "18.19.127"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.127.tgz#7c2e47fa79ad7486134700514d4a975c4607f09d"
-  integrity sha512-gSjxjrnKXML/yo0BO099uPixMqfpJU0TKYjpfLU7TrtA2WWDki412Np/RSTPRil1saKBhvVVKzVx/p/6p94nVA==
+"@types/node@^18.19.129":
+  version "18.19.129"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.19.129.tgz#1fea86229068c748ea395294dae4b0d5f1d96290"
+  integrity sha512-hrmi5jWt2w60ayox3iIXwpMEnfUvOLJCRtrOPbHtH15nTjvO7uhnelvrdAs0dO0/zl5DZ3ZbahiaXEVb54ca/A==
   dependencies:
     undici-types "~5.26.4"
 
@@ -625,10 +625,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@upstash/redis@^1.35.4":
-  version "1.35.4"
-  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.35.4.tgz#28a8a5492b32a9a546c709502ffbd57de06c87ef"
-  integrity sha512-WE1ZnhFyBiIjTDW13GbO6JjkiMVVjw5VsvS8ENmvvJsze/caMQ5paxVD44+U68IUVmkXcbsLSoE+VIYsHtbQEw==
+"@upstash/redis@^1.35.5":
+  version "1.35.5"
+  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.35.5.tgz#c24515012fa200c29d85484dee367287a1b1de74"
+  integrity sha512-KdLdNAspQGOTGeC++o2LDBzNbMXrfInnmW5nUJfNXabnVh8X4NPrlJ0X4j75cBUShiMpXB3uI1ql4KpFQeqrHQ==
   dependencies:
     uncrypto "^0.1.3"
 
@@ -2644,10 +2644,10 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-npm-check-updates@^18.3.0:
-  version "18.3.0"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-18.3.0.tgz#d2094b11e9557755813e35c1f470fe30c0c3a4e3"
-  integrity sha512-Wcm90Af5JuzxwPTtdLl0OH2O1TCeqPTYBch1M3bePmfqylRMiFXXh+uglE4sfMjwdTjw7aIReMwudXeqoYvh2Q==
+npm-check-updates@^18.3.1:
+  version "18.3.1"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-18.3.1.tgz#6927b04d9818d851ec90e11a9fd0ca2ac3a8b7aa"
+  integrity sha512-5HwKPq7ybOOA1xB4FZg/1ToZZ5/i93U8m3co1mb3GYZAZPDkcxEFukQTTp/Abym+ZY6ShfrHl45Y0rCcwsNnQA==
 
 object-inspect@^1.13.1, object-inspect@^1.9.0:
   version "1.13.1"
@@ -3595,10 +3595,10 @@ typed-array-length@^1.0.7:
     possible-typed-array-names "^1.0.0"
     reflect.getprototypeof "^1.0.6"
 
-typescript@^5.9.2:
-  version "5.9.2"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.2.tgz#d93450cddec5154a2d5cabe3b8102b83316fb2a6"
-  integrity sha512-CWBzXQrc/qOkhidw1OzBTQuYRbfyxDXJMVJ1XNwUHGROVmuaeiEm3OslpZ1RV96d7SKKjZKrSJu3+t/xlw3R9A==
+typescript@^5.9.3:
+  version "5.9.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
+  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
 
 unbox-primitive@^1.0.2:
   version "1.0.2"
