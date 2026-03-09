@@ -29,7 +29,7 @@
 		"ncu": "ncu"
 	},
 	"dependencies": {
-		"@upstash/redis": "^1.36.2",
+		"@upstash/redis": "^1.36.4",
 		"svelte-kit-sessions": "^0.4.0"
 	},
 	"devDependencies": {
