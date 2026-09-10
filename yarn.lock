@@ -628,10 +628,10 @@
   resolved "https://registry.yarnpkg.com/@ungap/structured-clone/-/structured-clone-1.2.0.tgz#756641adb587851b5ccb3e095daf27ae581c8406"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
-"@upstash/redis@^1.38.3":
-  version "1.38.3"
-  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.38.3.tgz#3c33e1d1617a856138e637775e55464d57d260a5"
-  integrity sha512-vtS0BonQHU6kDSWvHTISh+LOuLIEk+jeMXebv20CDJ/aHGOG085SGa8OpI+I+Ow8WgPFhqH23XG8kQ2LXXRnag==
+"@upstash/redis@^1.38.4":
+  version "1.38.4"
+  resolved "https://registry.yarnpkg.com/@upstash/redis/-/redis-1.38.4.tgz#50010c27c7afff07fea7e1174729d73932509d47"
+  integrity sha512-ZX69mKReun/yieyHYLoBg0eSiF6hjCQjd8zUKkJ5eCHehDV6P8S8oZOHxGSfkH1spfOhGZk0EGerBrfUsXow8g==
   dependencies:
     uncrypto "^0.1.3"
 
